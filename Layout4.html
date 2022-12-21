@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 1</title>
+    <title>Layout 4</title>
     <style>
         body {
             margin: 0px;
             font-weight: bold;
-            min-height: 100vh;
+            height: 125vh;
             display: flex;
             flex-direction: column;
 
@@ -30,10 +30,16 @@
             flex-grow: 5;
         }
 
+        #tablet {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 9;
+        }
+
         #article {
             padding: 2vh;
             display: flex;
-            flex-grow: 3;
+            flex-grow: 8;
         }
 
         #aside {
@@ -42,12 +48,14 @@
             background-color: darkblue;
             color: white;
             flex-grow: 1;
+
         }
 
         #nav {
             padding: 2vh;
             display: flex;
             background-color: magenta;
+            order: -1;
             color: white;
             flex-grow: 1;
         }
@@ -59,15 +67,29 @@
             color: white;
             flex-grow: 1;
         }
+
+        @media (max-width: 800px) {
+            #content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #tablet {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="header">Header</div>
     <div id="content">
-        <div id="article">Article</div>
-        <div id="aside">Aside</div>
         <div id="nav">Nav</div>
+        <div id="tablet">
+            <div id="article">Article</div>
+            <div id="aside">Aside</div>
+        </div>
     </div>
     <div id="footer">Footer</div>
 

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 1</title>
+    <title>Layout 3</title>
     <style>
         body {
             margin: 0px;
             font-weight: bold;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
 
         }
 
@@ -33,7 +33,13 @@
         #article {
             padding: 2vh;
             display: flex;
-            flex-grow: 3;
+            flex-grow: 8;
+        }
+
+        #inside {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 6;
         }
 
         #aside {
@@ -48,8 +54,15 @@
             padding: 2vh;
             display: flex;
             background-color: magenta;
+            flex-direction: column;
             color: white;
             flex-grow: 1;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 8;
         }
 
         #footer {
@@ -63,14 +76,17 @@
 </head>
 
 <body>
-    <div id="header">Header</div>
-    <div id="content">
-        <div id="article">Article</div>
-        <div id="aside">Aside</div>
-        <div id="nav">Nav</div>
+    <div id="nav">Nav</div>
+    <div id="main">
+        <div id="header">Header</div>
+        <div id="content">
+            <div id="inside">
+                <div id="article">Article</div>
+                <div id="footer">Footer</div>
+            </div>
+            <div id="aside">Aside</div>
+        </div>
     </div>
-    <div id="footer">Footer</div>
-
 
 </body>
 
