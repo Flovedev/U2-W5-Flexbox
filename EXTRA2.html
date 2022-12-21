@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXTRA2</title>
+
+    <style>
+        body,
+        p {
+            margin: 0px;
+            font-size: 2vh;
+        }
+
+        #container {
+            width: 130vh;
+            display: flex;
+            margin: 10vh;
+            border: 2px solid;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        #first-column {
+            height: 400px;
+            display: flex;
+            background-color: lightgreen;
+            border-right: 2px solid black;
+            text-align: center;
+            color: white;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        #second-column {
+            display: flex;
+            background-color: lightblue;
+            text-align: center;
+            color: white;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        #third-column {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        #third-column-1 {
+            display: flex;
+            background-color: rgb(243, 243, 207);
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #third-column-2 {
+            display: flex;
+            background-color: rgb(247, 247, 128);
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #third-column-3 {
+            display: flex;
+            background-color: yellow;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="first-column">
+            <p>First column</p>
+            <p>Height 400px;</p>
+            <p>Green-ish background</p>
+            <p>Text Centered</p>
+        </div>
+        <div id="second-column">
+            <p>Second column</p>
+            <p>Text To the bottom;</p>
+            <p>Bold, blueish</p>
+            <p>background</p>
+        </div>
+        <div id="third-column">
+            <div id="third-column-1">
+                <p>Third Column Part 1</p>
+            </div>
+            <div id="third-column-2">
+                <p>Third Column Part 1</p>
+            </div>
+            <div id="third-column-3">
+                <p>Third Column Part 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
