@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXTRA — Vertical Grid</title>
+
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            gap: 1vh;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 1vh;
+        }
+
+        .mini-box {
+            color: white;
+            padding: 1vh;
+            display: flex;
+            background-color: magenta;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        function displayBoxes() {
+            let bodyNode = document.querySelector('body')
+            for (let i = 0; i < 12; i++) {
+                let boxNode = document.createElement('div')
+                boxNode.classList.add('box')
+                bodyNode.appendChild(boxNode)
+                for (let y = 0; y < i + 1; y++) {
+                    let miniBoxNode = document.createElement('div')
+                    miniBoxNode.innerText = y + 1
+                    miniBoxNode.classList.add('mini-box')
+                    boxNode.appendChild(miniBoxNode)
+                }
+            }
+        }
+        displayBoxes()
+    </script>
+</body>
+
+</html>
